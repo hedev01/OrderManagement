@@ -5,6 +5,7 @@ using OrderManagement.Application;
 using OrderManagement.Infrastructure;
 using OrderManagement.Infrastructure.Authentication;
 using OrderManagement.Infrastructure.Data;
+using OrderManagement.Infrastructure.Extensions;
 using OrderManagement.Infrastructure.Persistence.Seed;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,16 +25,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-
-using (var scope = app.Services.CreateScope())
-{
-    var services = scope.ServiceProvider;
-
-    var context =
-        services.GetRequiredService<ApplicationDbContext>();
-
-    await UserSeeder.SeedAsync(context);
-}
+//Seed Data
+await app.SeedDatabaseAsync();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
