@@ -11,6 +11,7 @@ using OrderManagement.Application.Interfaces.Persistence;
 using OrderManagement.Infrastructure.Authentication;
 using OrderManagement.Infrastructure.Data;
 using OrderManagement.Infrastructure.Persistence;
+using OrderManagement.Infrastructure.Persistence.Seed;
 using OrderManagement.Infrastructure.Settings;
 
 namespace OrderManagement.Infrastructure
@@ -33,11 +34,16 @@ namespace OrderManagement.Infrastructure
 
             services.AddScoped<IUserRepository, UserRepository>();
 
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
+
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddScoped<IPasswordHasher, PasswordHasher>();
 
             services.AddScoped<IJwtTokenService, JwtTokenService>();
+
+            //Seed Data DI
+            services.AddScoped<IDatabaseSeeder, DatabaseSeeder>();
 
             return services;
         }
