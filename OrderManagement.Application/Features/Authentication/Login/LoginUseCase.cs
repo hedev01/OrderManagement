@@ -33,7 +33,7 @@ namespace OrderManagement.Application.Features.Authentication.Login
 
             if (user is null)
             {
-                return Result<LoginResponse>.Failure("Invalid username or password.");
+                return Result<LoginResponse>.Failure("نام کاربری یا رمز عبور نامعتبر است.");
             }
 
             var passwordValid =
@@ -43,7 +43,7 @@ namespace OrderManagement.Application.Features.Authentication.Login
 
             if (!passwordValid)
             {
-                return Result<LoginResponse>.Failure("Invalid username or password.");
+                return Result<LoginResponse>.Failure("نام کاربری یا رمز عبور نامعتبر است.");
             }
 
             var token =

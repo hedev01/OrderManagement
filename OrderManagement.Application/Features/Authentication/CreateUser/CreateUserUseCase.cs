@@ -34,7 +34,7 @@ namespace OrderManagement.Application.Features.Authentication.CreateUser
 
             if (exists)
             {
-                return Result<CreateUserResponse>.Failure("Username already exists.");
+                return Result<CreateUserResponse>.Failure("نام کاربری از قبل وجود دارد.");
             }
 
             var passwordHash =
