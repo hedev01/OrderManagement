@@ -91,13 +91,16 @@ Example:
 ```json
 {
   "Jwt": {
-    "Key": "YOUR_DEVELOPMENT_SECRET_KEY",
+    "Key": "5uCKS7klVVbMBC0qMRo7Eu7s0QfLH2V0O1lY95S2/v1V3YBoxfow2he3nJw26kGK1trmQVsRqgG5fbxnW2J3AA==",
     "Issuer": "OrderManagement",
     "Audience": "OrderManagementClient",
     "ExpirationMinutes": 60
   }
 }
 ```
+
+> **Note:** The JWT key included in `appsettings.json` is a development-only
+> secret intended for local testing and must not be used in production.
 
 For production environments, sensitive values should be stored using environment variables, User Secrets, or another secure configuration provider.
 
