@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManagement.Domain", "OrderManagement.Domain\OrderManagement.Domain.csproj", "{94C682A6-254F-4F8B-86CE-A545504C1621}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderManagement.Domain", "OrderManagement.Domain\OrderManagement.Domain.csproj", "{94C682A6-254F-4F8B-86CE-A545504C1621}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManagement.Application", "OrderManagement.Application\OrderManagement.Application.csproj", "{DBA9A7DA-1C45-4285-8E4A-B303B6F3E424}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderManagement.Application", "OrderManagement.Application\OrderManagement.Application.csproj", "{DBA9A7DA-1C45-4285-8E4A-B303B6F3E424}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManagement.Infrastructure", "OrderManagement.Infrastructure\OrderManagement.Infrastructure.csproj", "{280949D8-1A31-4035-96B3-F767BA2E0B14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderManagement.Infrastructure", "OrderManagement.Infrastructure\OrderManagement.Infrastructure.csproj", "{280949D8-1A31-4035-96B3-F767BA2E0B14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManagement.API", "OrderManagement.API\OrderManagement.API.csproj", "{7E812202-C707-4E16-819B-F932C5D4B8E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderManagement.API", "OrderManagement.API\OrderManagement.API.csproj", "{7E812202-C707-4E16-819B-F932C5D4B8E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderManagement.Tests", "OrderManagement.Tests\OrderManagement.Tests.csproj", "{149CB806-7DAF-47B0-B3AC-62F2AF9DDCB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,18 @@ Global
 		{7E812202-C707-4E16-819B-F932C5D4B8E4}.Release|x64.Build.0 = Release|Any CPU
 		{7E812202-C707-4E16-819B-F932C5D4B8E4}.Release|x86.ActiveCfg = Release|Any CPU
 		{7E812202-C707-4E16-819B-F932C5D4B8E4}.Release|x86.Build.0 = Release|Any CPU
+		{149CB806-7DAF-47B0-B3AC-62F2AF9DDCB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{149CB806-7DAF-47B0-B3AC-62F2AF9DDCB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{149CB806-7DAF-47B0-B3AC-62F2AF9DDCB7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{149CB806-7DAF-47B0-B3AC-62F2AF9DDCB7}.Debug|x64.Build.0 = Debug|Any CPU
+		{149CB806-7DAF-47B0-B3AC-62F2AF9DDCB7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{149CB806-7DAF-47B0-B3AC-62F2AF9DDCB7}.Debug|x86.Build.0 = Debug|Any CPU
+		{149CB806-7DAF-47B0-B3AC-62F2AF9DDCB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{149CB806-7DAF-47B0-B3AC-62F2AF9DDCB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{149CB806-7DAF-47B0-B3AC-62F2AF9DDCB7}.Release|x64.ActiveCfg = Release|Any CPU
+		{149CB806-7DAF-47B0-B3AC-62F2AF9DDCB7}.Release|x64.Build.0 = Release|Any CPU
+		{149CB806-7DAF-47B0-B3AC-62F2AF9DDCB7}.Release|x86.ActiveCfg = Release|Any CPU
+		{149CB806-7DAF-47B0-B3AC-62F2AF9DDCB7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
