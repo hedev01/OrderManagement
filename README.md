@@ -665,13 +665,12 @@ OrderManagement
 │   │   ├── Migrations
 │   │   └── ApplicationDbContext
 │   ├── Repositories
-│   ├── Services
-│   └── Seed
+│   ├── Extensions
+│   ├── Seed
+│   └── Authentication
 │
 ├── OrderManagement.API
 │   ├── Controllers
-│   ├── Extensions
-│   ├── Middleware
 │   └── Program.cs
 │
 └── OrderManagement.Tests
