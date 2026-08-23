@@ -12,6 +12,9 @@ namespace OrderManagement.Application.Interfaces.Persistence
         Task<Customer?> GetByIdAsync(
             Guid id,
             CancellationToken cancellationToken);
+        Task<IReadOnlyList<Customer>> GetByIdsAsync(
+            IReadOnlyCollection<Guid> ids,
+            CancellationToken cancellationToken);
 
         Task<bool> ExistsByEmailAsync(
             string email,
