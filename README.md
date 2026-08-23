@@ -40,7 +40,7 @@ Follow these steps to run the project locally.
 ## 1. Clone the Repository
 
 ```bash
-git clone <YOUR_REPOSITORY_URL>
+git clone https://github.com/hedev01/OrderManagement.git
 cd OrderManagement
 ```
 
