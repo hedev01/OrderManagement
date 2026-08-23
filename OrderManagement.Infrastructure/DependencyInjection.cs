@@ -36,6 +36,10 @@ namespace OrderManagement.Infrastructure
 
             services.AddScoped<ICustomerRepository, CustomerRepository>();
 
+            services.AddScoped<IOrderRepository, OrderRepository>();
+
+            services.AddScoped<IProductRepository, ProductRepository>();
+
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddScoped<IPasswordHasher, PasswordHasher>();
