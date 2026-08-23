@@ -47,5 +47,38 @@ namespace OrderManagement.Domain.Entities
 
             TotalPrice += item.TotalPrice;
         }
+        public void ChangeStatus(OrderStatus newStatus)
+        {
+            if (!IsValidStatusTransition(
+                    Status,
+                    newStatus))
+            {
+                throw new InvalidOperationException(
+                    $"Cannot change order status from {Status} to {newStatus}.");
+            }
+
+            Status = newStatus;
+        }
+        private static bool IsValidStatusTransition(
+            OrderStatus currentStatus,
+            OrderStatus newStatus)
+        {
+            return currentStatus switch
+            {
+                OrderStatus.Pending =>
+                    newStatus == OrderStatus.Confirmed,
+
+                OrderStatus.Confirmed =>
+                    newStatus == OrderStatus.Shipped,
+
+                OrderStatus.Shipped =>
+                    newStatus == OrderStatus.Delivered,
+
+                OrderStatus.Delivered =>
+                    false,
+
+                _ => false
+            };
+        }
     }
 }
