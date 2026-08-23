@@ -10,8 +10,8 @@ using OrderManagement.Application.Interfaces.Authentication;
 using OrderManagement.Application.Interfaces.Persistence;
 using OrderManagement.Infrastructure.Authentication;
 using OrderManagement.Infrastructure.Data;
-using OrderManagement.Infrastructure.Persistence;
 using OrderManagement.Infrastructure.Persistence.Seed;
+using OrderManagement.Infrastructure.Repositories;
 using OrderManagement.Infrastructure.Settings;
 
 namespace OrderManagement.Infrastructure
@@ -30,8 +30,7 @@ namespace OrderManagement.Infrastructure
                 options.UseSqlServer(connectionString);
             });
 
-            
-
+            //Repo DI
             services.AddScoped<IUserRepository, UserRepository>();
 
             services.AddScoped<ICustomerRepository, CustomerRepository>();
@@ -42,6 +41,7 @@ namespace OrderManagement.Infrastructure
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
+            // Auth DI
             services.AddScoped<IPasswordHasher, PasswordHasher>();
 
             services.AddScoped<IJwtTokenService, JwtTokenService>();
