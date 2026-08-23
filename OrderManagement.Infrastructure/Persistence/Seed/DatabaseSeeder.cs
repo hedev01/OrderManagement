@@ -16,11 +16,11 @@ namespace OrderManagement.Infrastructure.Persistence.Seed
         }
         public async Task SeedAsync(CancellationToken cancellationToken = default)
         {
-            await UserSeeder.SeedAsync(
-                _context);
+            await UserSeeder.SeedAsync(_context);
 
-            await CustomerSeeder.SeedAsync(
-                _context);
+            await CustomerSeeder.SeedAsync(_context);
+
+            await ProductSeeder.SeedAsync(_context);
         }
     }
 }
