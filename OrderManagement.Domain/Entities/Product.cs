@@ -37,5 +37,9 @@ namespace OrderManagement.Domain.Entities
 
             CreatedAt = DateTime.UtcNow;
         }
+        public void SetInventory(Inventory inventory)
+        {
+            Inventory = inventory;
+        }
     }
 }
