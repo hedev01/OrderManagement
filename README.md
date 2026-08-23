@@ -156,7 +156,7 @@ Example:
 ```json
 {
   "username": "admin",
-  "password": "YOUR_PASSWORD"
+  "password": "Admin123"
 }
 ```
 
