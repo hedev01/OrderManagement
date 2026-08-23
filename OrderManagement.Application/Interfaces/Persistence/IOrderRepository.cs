@@ -32,8 +32,16 @@ namespace OrderManagement.Application.Interfaces.Persistence
                 int pageSize,
                 CancellationToken cancellationToken);
 
+        Task<Order?> GetForStatusChangeAsync(
+            Guid id,
+            CancellationToken cancellationToken);
+
         Task DeleteAsync(
             Order order,
+            CancellationToken cancellationToken);
+
+        Task<Order?> GetForDeleteAsync(
+            Guid id,
             CancellationToken cancellationToken);
     }
 }
